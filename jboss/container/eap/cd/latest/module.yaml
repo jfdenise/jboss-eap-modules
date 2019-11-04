@@ -4,7 +4,7 @@ version: 'latest'
 description:  "Latest JBoss Enterprise Application Platform CD"
 envs:
     - name: "WILDFLY_VERSION"
-      value: "7.3.0.CD18-redhat-00002"
+      value: "19.0.0.Beta1-SNAPSHOT"
 modules:
     install:
         - name: eap-cd-env-latest
