@@ -1,0 +1,7 @@
+schema_version: 1
+name: jboss.container.eap.galleon.feature-pack-build.ee
+version: '1.0'
+description: Install Galleon feature-pack-build file with dependency on wildfly-ee-galleon-pack
+
+execute:
+- script: configure.sh

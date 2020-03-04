@@ -1,0 +1,7 @@
+schema_version: 1
+name: jboss.container.eap.galleon.feature-pack-build.mp-ee-default-config
+version: '1.0'
+description: Install Galleon feature-pack-build file with dependency on wildfly-galleon-pack, default config being inherited from  wildfly-ee-galleon-pack
+
+execute:
+- script: configure.sh
