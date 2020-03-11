@@ -1,6 +1,16 @@
 @jboss-eap-7 @jboss-eap-7-tech-preview
 Feature: Openshift EAP galleon s2i tests
 
+  Scenario: Test microprofile config.
+    Given s2i build git://github.com/openshift/openshift-jee-sample from . with env and true using master
+      | variable                             | value         |
+      | GALLEON_PROVISION_LAYERS             | cloud-server,microprofile-openapi,microprofile-jwt,microprofile-fault-tolerance,-jpa,jpa-distributed,web-clustering  |
+    Then container log should contain WFLYSRV0025
+    And check that page is served
+      | property | value |
+      | path     | /     |
+      | port     | 8080  |
+
   Scenario: Galleon provision cloud-server
     Given s2i build git://github.com/openshift/openshift-jee-sample from . with env and true using master
     | variable                        | value                                                                                  |
