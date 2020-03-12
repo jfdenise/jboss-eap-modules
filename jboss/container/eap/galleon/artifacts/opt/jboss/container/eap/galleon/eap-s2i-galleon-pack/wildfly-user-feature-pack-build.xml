@@ -20,7 +20,7 @@
   ~ 02110-1301 USA, or see the FSF site: http://www.fsf.org.
   -->
 
-<build xmlns="urn:wildfly:feature-pack-build:3.0" producer="org.jboss.eap.galleon.s2i:eap-s2i-galleon-pack">
+<build xmlns="urn:wildfly:feature-pack-build:3.1" producer="org.jboss.eap.galleon.s2i:eap-s2i-galleon-pack">
 
     <transitive>
         <dependency group-id="org.wildfly.core" artifact-id="wildfly-core-galleon-pack">
@@ -31,8 +31,8 @@
         </dependency>
     </transitive>
     <dependencies>
-        <dependency group-id="org.jboss.eap" artifact-id="wildfly-galleon-pack">
-            <name>org.wildfly:wildfly-galleon-pack</name>
+        <dependency group-id="org.jboss.eap" artifact-id="wildfly-ee-galleon-pack">
+            <name>org.wildfly:wildfly-ee-galleon-pack</name>
             <packages inherit="true"/>
             <default-configs inherit="true"/>
         </dependency>
