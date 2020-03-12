@@ -4,7 +4,7 @@
     <!-- Use the image version,  to avoid retrieving metadata.xml for un-released s2i FP-->
     <feature-pack location="eap-s2i@maven(org.jboss.universe:s2i-universe)#18.0.0.Final">
         <default-configs inherit="false">
-            <include model="standalone" name="standalone.xml"/>
+            <include model="standalone" name="standalone-microprofile-ha.xml"/>
         </default-configs>
     </feature-pack>
 </installation>
