@@ -37,7 +37,7 @@ Feature: Openshift EAP s2i tests
     And run sh -c 'test -d /tmp/artifacts/m2/org && echo all good' in container and immediately check its output for all good
     And s2i build log should contain -Djava.net.preferIPv4Stack=true
     And s2i build log should contain -Dfoo=bar
-    And s2i build log should contain -XX:+UseParallelOldGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:MaxMetaspaceSize=100m -XX:+ExitOnOutOfMemoryError
+    And s2i build log should contain -XX:+UseParallelOldGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError
 
   # CLOUD-458
   Scenario: Test s2i build with environment only
